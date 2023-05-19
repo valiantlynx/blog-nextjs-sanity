@@ -7,7 +7,7 @@ const config = {
     ],
   },
   env: {
-        GA_MEASUREMENT_ID: "G-E1KHJ9LDW8",
+        GA_MEASUREMENT_ID: "G-M2PVXMBE67",
     },
   typescript: {
     // Set this to false if you want production builds to abort if there's type errors
