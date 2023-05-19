@@ -4,10 +4,9 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html lang="en">
-        <Head />
-      <head>
-
-      <Script id="clarity" strategy="beforeInteractive">
+    
+      <Head>
+        <Script id="clarity" strategy="beforeInteractive">
           {`
         (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -16,16 +15,16 @@ export default function Document() {
       })(window, document, "clarity", "script", "ftpnw924g7");
         `}
         </Script>
-  <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7827487944601896" strategy="afterInteractive" />
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+        <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7827487944601896" strategy="afterInteractive" />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -33,11 +32,11 @@ export default function Document() {
           page_path: window.location.pathname,
         });
       `,
-        }}
-      />
-  
-      </head>
-    
+          }}
+        />
+
+      </Head>
+
       <body className="bg-white text-black">
         <Main />
         <NextScript />
