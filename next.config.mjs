@@ -6,6 +6,9 @@ const config = {
       { hostname: 'source.unsplash.com' },
     ],
   },
+  env: {
+        GA_MEASUREMENT_ID: "G-E1KHJ9LDW8",
+    },
   typescript: {
     // Set this to false if you want production builds to abort if there's type errors
     ignoreBuildErrors: process.env.VERCEL_ENV === 'production',
