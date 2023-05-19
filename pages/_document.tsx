@@ -16,20 +16,25 @@ export default function Document() {
       })(window, document, "clarity", "script", "ftpnw924g7");
         `}
         </Script>
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-M2PVXMBE67"
-          strategy="beforeInteractive"
-        />
-        <Script id="google-analytics" strategy="beforeInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-M2PVXMBE67');
-        `}
-        </Script>
+  <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7827487944601896" strategy="afterInteractive" />
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.GA_MEASUREMENT_ID}', {
+          page_path: window.location.pathname,
+        });
+      `,
+        }}
+      />
   
       </head>
     
