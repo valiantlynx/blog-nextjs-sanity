@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
     
       <Head>
-        <Script id="clarity" strategy="beforeInteractive">
+        <Script id="clarity" strategy="afterInteractive">
           {`
         (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
