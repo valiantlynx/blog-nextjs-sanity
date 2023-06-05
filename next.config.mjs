@@ -8,7 +8,7 @@ const config = {
   },
   env: {
         GA_MEASUREMENT_ID: "G-M2PVXMBE67",
-        CLARITY_KEY: "f9jxaugc1a"
+        CLARITY_KEY: "ftpnw924g7"
     },
   typescript: {
     // Set this to false if you want production builds to abort if there's type errors
